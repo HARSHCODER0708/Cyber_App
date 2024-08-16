@@ -247,6 +247,7 @@ const questions = [
   
   // Function to get a random question
 
+
 function getRandomQuestion() {
     if (availableQuestions.length === 0) {
         displayEndMessage();
@@ -342,7 +343,7 @@ document.getElementById('passwordGenBtn').addEventListener('click', function() {
 document.getElementById('passwordsstrenghtBtn').addEventListener('click', function() {
     let password = generatePassword();
     document.getElementById('content').innerHTML = `
-        <h1>Password Strength Checker</h1>
+        <h2>Password Strength Checker</h2>
         <input type="password" id="password" placeholder="Enter your password">
         <button onclick="checkPassword()">Check Strength</button>
         <div id="result" class="strength"></div>
@@ -358,7 +359,11 @@ document.getElementById('infoGuideBtn').addEventListener('click', function() {
             <li>Understand common threats such as phishing, malware, and ransomware.</li>
             <li>Use strong, unique passwords for different accounts.</li>
             <li>Keep your software and systems updated.</li>
-            <li>Be cautious of suspicious emails and links.</li>
+            <li>Cyberterrorism: This threat is a politically-based attack on computers and information technology to cause harm and create widespread social disruption.</li>
+            <li>Malware: This threat encompasses ransomware, spyware, viruses, and worms. It can install harmful software, block access to your computer resources, disrupt the system, or covertly transmit information from your data storage.</li>
+            <li>Trojans: Like the legendary Trojan Horse of mythology, this attack tricks users into thinking they're opening a harmless file. Instead, once the trojan is in place, it attacks the system, typically establishing a backdoor that allows access to cybercriminals.</li>
+            <li>Man-in-the-middle attack: MITM attacks involve hackers inserting themselves into a two-person online transaction. Once in, the hackers can filter and steal desired data. MITM attacks often happen on unsecured public Wi-Fi networks.</li>
+
         </ul>
     `;
 });
