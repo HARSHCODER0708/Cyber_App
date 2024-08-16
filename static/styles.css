@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #7f5e5ee8; /* Set a light gray background color for the entire page */
+  color: #000000; /* Set a default text color */
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #22b67d; /* White background color for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
+}
+
+h1, h2 {
+  color: #333; /* Dark text color for headers */
+}
+
+button {
+  background-color: #007bff; /* Blue background color for buttons */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+button#quizBtn {
+  background-color: #28a745; /* Green background color for the quiz button */
+}
+
+button#quizBtn:hover {
+  background-color: #218838; /* Darker green on hover for quiz button */
+}
+
+button#passwordGenBtn {
+  background-color: #17a2b8; /* Teal background color for the password generator button */
+}
+
+button#passwordGenBtn:hover {
+  background-color: #138496; /* Darker teal on hover for password generator button */
+}
+
+button#infoGuideBtn {
+  background-color: #ffc107; /* Yellow background color for the info guide button */
+}
+
+button#infoGuideBtn:hover {
+  background-color: #e0a800; /* Darker yellow on hover for info guide button */
+}
+
+.content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #9bc5ee; /* Light gray background color for the content area */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #000; /* Dark text color for better readability */
+}
