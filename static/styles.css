@@ -5,8 +5,9 @@ body {
     background-attachment: fixed; /* Keep the image fixed during scrolling */
     background-repeat: no-repeat; /* Prevent image repetition */
     font-family: Arial, sans-serif;
+    font-style:italic;
     color: #0c0536;
-    margin: 0;
+    margin: 10;
     padding: 0;
     height: 100vh; /* Ensure the body takes up the full height of the viewport */
 }
@@ -17,7 +18,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding: 20px;
+  padding: 9px;
   background-color: #5b568f; /* White background color for the container */
   border-radius: 10px;
   box-shadow: 0 px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
@@ -29,11 +30,13 @@ h1 {
   font-weight: bold; /* Bold weight */
   font-style: italic;
   color: #000000;
+  text-decoration: underline;
 }
 
 h2 {
   font-family: 'Gill Sans', 'Sans-serif'; /* Use system serif fonts */
   font-weight: bold; /* Bold weight */
+  text-decoration: underline;
   color: #000000;
 }
 
@@ -102,14 +105,15 @@ button#passwordstrengthBtn:hover {
   background-color: #007bff;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 1px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  font-size: 11px;
 }
 
 #footer p {
-  margin: 5px 0;
+  margin: 3px 0;
 }
 
 #footer a {
@@ -118,32 +122,6 @@ button#passwordstrengthBtn:hover {
 }
 
 #footer a:hover {
-  text-decoration: underline;
-}
-
-/* Side Footer Styles */
-#side-footer {
-  background-color: #343a40;
-  color: white;
-  text-align: left;
-  padding: 20px;
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 200px;
-}
-
-#side-footer p {
-  margin: 10px 0;
-}
-
-#side-footer a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-#side-footer a:hover {
   text-decoration: underline;
 }
 
