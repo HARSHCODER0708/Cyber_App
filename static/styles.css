@@ -11,6 +11,7 @@ body {
     height: 100vh; /* Ensure the body takes up the full height of the viewport */
 }
 
+
 .container {
   width: 80%;
   max-width: 800px;
@@ -26,6 +27,7 @@ body {
 h1 {
   font-family: 'Georgia', 'Times New Roman', 'serif'; /* Use system serif fonts */
   font-weight: bold; /* Bold weight */
+  font-style: italic;
   color: #000000;
 }
 
@@ -33,6 +35,12 @@ h2 {
   font-family: 'Gill Sans', 'Sans-serif'; /* Use system serif fonts */
   font-weight: bold; /* Bold weight */
   color: #000000;
+}
+
+footer {
+  font-family: 'Comic Sans ms', 'Sans-serif'; /* Use system serif fonts */
+  font-weight: bold; /* Bold weight */
+  color: #ffffff;
 }
 
 button {
@@ -80,4 +88,79 @@ button#infoGuideBtn:hover {
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
+
+}
+button#passwordsstrenghtBtn {
+  background-color: #5d0505; /* Yellow background color for the info guide button */
+}
+button#passwordstrengthBtn:hover {
+  background-color: #55210c; /* Darker yellow on hover for info guide button */
+}
+
+/* Footer Styles */
+#footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer p {
+  margin: 5px 0;
+}
+
+#footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+/* Side Footer Styles */
+#side-footer {
+  background-color: #343a40;
+  color: white;
+  text-align: left;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+}
+
+#side-footer p {
+  margin: 10px 0;
+}
+
+#side-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#side-footer a:hover {
+  text-decoration: underline;
+}
+
+.strength {
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.easy {
+  color: red;
+}
+
+.moderate {
+  color: rgb(77, 63, 38);
+}
+
+.strong {
+  color: green;
 }
