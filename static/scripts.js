@@ -156,7 +156,7 @@ document.getElementById('infoGuideBtn').addEventListener('click', function() {
             <li>Cyberterrorism: This threat is a politically-based attack on computers and information technology to cause harm and create widespread social disruption.</li>
             <li>Malware: This threat encompasses ransomware, spyware, viruses, and worms. It can install harmful software, block access to your computer resources, disrupt the system, or covertly transmit information from your data storage.</li>
             <li>Trojans: Like the legendary Trojan Horse of mythology, this attack tricks users into thinking they're opening a harmless file. Instead, once the trojan is in place, it attacks the system, typically establishing a backdoor that allows access to cybercriminals.</li>
-            <li>Trojans: Like the legendary Trojan Horse of mythology, this attack tricks users into thinking they're opening a harmless file. Instead, once the trojan is in place, it attacks the system, typically establishing a backdoor that allows access to cybercriminals.</li>
+            <li>Botnets: This especially hideous attack involves large-scale cyberattacks conducted by remotely controlled malware-infected devices. Think of it as a string of computers under the control of one coordinating cybercriminal. What’s worse, compromised computers become part of the botnet system.</li>
             
         </ul>
     `;
