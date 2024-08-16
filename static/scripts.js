@@ -1,206 +1,158 @@
-document.getElementById('quizBtn').addEventListener('click', function() {
-    const questions = [
-        {
-            question: "What is the primary purpose of a firewall?",
-            options: [
-                "A) To increase network speed",
-                "B) To block unauthorized access",
-                "C) To provide internet access",
-                "D) To store data"
-            ],
-            answer: "B"
-        },
-        {
-            question: "What does 'phishing' refer to?",
-            options: [
-                "A) A type of malware",
-                "B) A method to access private data via deceptive emails",
-                "C) A network security tool",
-                "D) A software for data recovery"
-            ],
-            answer: "B"
-        },
-        {
-            question: "Which of the following is a strong password?",
-            options: [
-                "A) password123",
-                "B) 123456",
-                "C) A1b2C3d4E5!",
-                "D) qwerty"
-            ],
-            answer: "C"
-        },
-        {
-            question: "What does HTTPS stand for?",
-            options: [
-                "A) HyperText Transfer Protocol Secure",
-                "B) HyperText Transfer Protocol Service",
-                "C) High Transfer Protocol Secure",
-                "D) Hypertext Transmission Protocol Secure"
-            ],
-            answer: "A"
-        },
-        {
-            question: "Which type of attack involves overwhelming a system with traffic?",
-            options: [
-                "A) Phishing attack",
-                "B) DDoS attack",
-                "C) SQL injection",
-                "D) Man-in-the-middle attack"
-            ],
-            answer: "B"
-        },
-        {
-            question: "What is the purpose of encryption?",
-            options: [
-                "A) To compress files",
-                "B) To make data unreadable to unauthorized users",
-                "C) To increase data storage",
-                "D) To improve system performance"
-            ],
-            answer: "B"
-        },
-        {
-            question: "Which of the following is an example of social engineering?",
-            options: [
-                "A) Installing malware",
-                "B) Phishing emails",
-                "C) Exploiting software vulnerabilities",
-                "D) Network scanning"
-            ],
-            answer: "B"
-        },
-        {
-            question: "What is a VPN used for?",
-            options: [
-                "A) To increase internet speed",
-                "B) To hide your IP address and encrypt your internet connection",
-                "C) To manage network traffic",
-                "D) To recover lost data"
-            ],
-            answer: "B"
-        },
-        {
-            question: "What does 'malware' stand for?",
-            options: [
-                "A) Malicious software",
-                "B) Management software",
-                "C) Mail software",
-                "D) Monitoring software"
-            ],
-            answer: "A"
-        },
-        {
-            question: "Which of the following is a common sign of a phishing attack?",
-            options: [
-                "A) Personalized greeting",
-                "B) Requests for sensitive information",
-                "C) A well-known sender",
-                "D) Secure website connection"
-            ],
-            answer: "B"
-        },
-        {
-            question: "Which of the below is a method of gaining access to a computer program or an entire computer system while circumventing all security measures?",
-            options: [
-                "A) Backdoor",
-                "B) Masquerading",
-                "C) Phishing",
-                "D) Trojan Horse"
-            ],
-            answer: "A"
-        },
-        {
-            question: "What is a single entrance for multiple connectivities called?",
-            options: [
-                "A) Web services",
-                "B) Phishing",
-                "C) Directory service",
-                "D) Worms"
-            ],
-            answer: "C"
-        },
-        {
-            question: "Which of the below malware types permits the hackers to access administrative controls and do nearly everything they want with the infected systems?",
-            options: [
-                "A) RATs",
-                "B) Worms",
-                "C) Rootkits",
-                "D) Botnets"
-            ],
-            answer: "C"
-        }
-    ];
+// Define an array of questions with multiple choices
+const questions = [
+    // Existing questions ...
+    // (Include the initial 10 questions here)
+    {
+        question: "What does 'CIA' stand for in cybersecurity?",
+        options: [
+            "A. Central Intelligence Agency",
+            "B. Confidentiality, Integrity, Availability",
+            "C. Computer Information Agency",
+            "D. Cyber Intelligence Analysis"
+        ],
+        answer: "B. Confidentiality, Integrity, Availability"
+    },
+    {
+        question: "Which of the following is a common type of phishing attack?",
+        options: [
+            "A. Spear Phishing",
+            "B. Watering Hole Attack",
+            "C. SQL Injection",
+            "D. Man-in-the-Middle Attack"
+        ],
+        answer: "A. Spear Phishing"
+    },
+    // Add other existing questions here
+    // Expanded questions
+    {
+        question: "What is the primary purpose of a VPN?",
+        options: [
+            "A. To hide your IP address",
+            "B. To provide antivirus protection",
+            "C. To manage passwords",
+            "D. To detect malware"
+        ],
+        answer: "A. To hide your IP address"
+    },
+    {
+        question: "What is the 'Zero Trust' model in cybersecurity?",
+        options: [
+            "A. A model that trusts all users within the network",
+            "B. A model that trusts no one by default and verifies everyone",
+            "C. A model that only trusts external connections",
+            "D. A model that trusts only high-level executives"
+        ],
+        answer: "B. A model that trusts no one by default and verifies everyone"
+    },
+    // Add other expanded questions here
+];
 
-    let currentQuestionIndex = 0;
+let availableQuestions = [...questions]; // Copy of questions array
+let currentQuestion = null;
 
-    function displayQuestion() {
-        if (currentQuestionIndex >= questions.length) {
-            document.getElementById('content').innerHTML = '<h2>Quiz Complete!</h2>';
-            return;
-        }
-
-        const q = questions[currentQuestionIndex];
-        let optionsHtml = q.options.map((option, index) => 
-            `<li><input type="radio" name="option" value="${String.fromCharCode(65 + index)}"> ${option}</li>`
-        ).join('');
-
-        document.getElementById('content').innerHTML = `
-            <h2>MCQ Quiz</h2>
-            <p>${q.question}</p>
-            <ul>${optionsHtml}</ul>
-            <button onclick="nextQuestion()">Next</button>
-        `;
+// Function to get a random question
+function getRandomQuestion() {
+    if (availableQuestions.length === 0) {
+        displayEndMessage();
+        return null;
     }
+    const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+    const question = availableQuestions[randomIndex];
+    availableQuestions.splice(randomIndex, 1); // Remove the question from the list
+    return question;
+}
 
-    window.nextQuestion = function() {
-        const selectedOption = document.querySelector('input[name="option"]:checked');
-        if (!selectedOption) {
-            alert('Please select an answer.');
-            return;
-        }
+// Function to display a question
+function displayQuestion(question) {
+    if (!question) return; // If no question, return
 
-        const answer = selectedOption.value;
-        if (answer === questions[currentQuestionIndex].answer) {
-            alert('Correct!');
-        } else {
-            alert('Incorrect. The correct answer was ' + questions[currentQuestionIndex].answer);
-        }
+    let optionsHtml = '';
 
-        currentQuestionIndex++;
-        displayQuestion();
-    };
+    question.options.forEach(option => {
+        optionsHtml += `<button class="option-button">${option}</button>`;
+    });
 
-    displayQuestion();
+    document.getElementById('content').innerHTML = `
+        <h2>MCQ Quiz</h2>
+        <div id="quiz">
+            <p>${question.question}</p>
+            <div id="options">
+                ${optionsHtml}
+            </div>
+            <button id="nextBtn" style="display:none;">Next Question</button>
+        </div>
+    `;
+
+    // Add event listeners to the option buttons
+    document.querySelectorAll('.option-button').forEach(button => {
+        button.addEventListener('click', () => {
+            checkAnswer(button.textContent, question.answer);
+        });
+    });
+}
+
+// Function to display a random quiz question
+function displayRandomQuestion() {
+    currentQuestion = getRandomQuestion();
+    displayQuestion(currentQuestion);
+}
+
+// Function to check the selected answer
+function checkAnswer(selectedOption, correctAnswer) {
+    if (selectedOption === correctAnswer) {
+        alert('Correct!');
+    } else {
+        alert('Incorrect. The correct answer is: ' + correctAnswer);
+    }
+    
+    // Automatically move to the next question
+    setTimeout(displayRandomQuestion, 1000); // Wait 1 second before displaying the next question
+}
+
+// Function to display a message when the quiz ends
+function displayEndMessage() {
+    document.getElementById('content').innerHTML = `
+        <h2>Quiz Completed</h2>
+        <p>Congratulations! You have completed the quiz. All questions have been answered.</p>
+    `;
+}
+
+// Function to generate a password
+function generatePassword() {
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+    let password = "";
+    for (let i = 0; i < 12; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset[randomIndex];
+    }
+    return password;
+}
+
+// Event listener for the "Start Quiz" button
+document.getElementById('quizBtn').addEventListener('click', function() {
+    availableQuestions = [...questions]; // Reset available questions
+    displayRandomQuestion();
 });
 
+// Event listener for the password generator button
 document.getElementById('passwordGenBtn').addEventListener('click', function() {
-    function generatePassword(length) {
-        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
-        let password = "";
-        for (let i = 0; i < length; i++) {
-            const randomIndex = Math.floor(Math.random() * charset.length);
-            password += charset[randomIndex];
-        }
-        return password;
-    }
-
-    const password = generatePassword(12); // Generate a 12-character password
+    let password = generatePassword();
     document.getElementById('content').innerHTML = `
         <h2>Password Generator</h2>
-        <p>Here is your generated password: <strong>${password}</strong></p>
+        <p>Your generated password: <strong>${password}</strong></p>
     `;
 });
 
+// Event listener for the information guide button
 document.getElementById('infoGuideBtn').addEventListener('click', function() {
     document.getElementById('content').innerHTML = `
         <h2>Information Guide</h2>
-        <p>Cybersecurity is essential for protecting your digital assets. Here are some key topics:</p>
+        <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. Here are some key points:</p>
         <ul>
-            <li><strong>Phishing:</strong> Be cautious of emails and messages that request sensitive information.</li>
-            <li><strong>Passwords:</strong> Use strong, unique passwords for different accounts.</li>
-            <li><strong>Software Updates:</strong> Regularly update your software to patch security vulnerabilities.</li>
-            <li><strong>Two-Factor Authentication:</strong> Enable this feature for an extra layer of security.</li>
+            <li>Understand common threats such as phishing, malware, and ransomware.</li>
+            <li>Use strong, unique passwords for different accounts.</li>
+            <li>Keep your software and systems updated.</li>
+            <li>Be cautious of suspicious emails and links.</li>
         </ul>
     `;
 });
