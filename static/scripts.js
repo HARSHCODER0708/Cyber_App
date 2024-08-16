@@ -99,6 +99,36 @@ document.getElementById('quizBtn').addEventListener('click', function() {
                 "D) Secure website connection"
             ],
             answer: "B"
+        },
+        {
+            question: "Which of the below is a method of gaining access to a computer program or an entire computer system while circumventing all security measures?",
+            options: [
+                "A) Backdoor",
+                "B) Masquerading",
+                "C) Phishing",
+                "D) Trojan Horse"
+            ],
+            answer: "A"
+        },
+        {
+            question: "What is a single entrance for multiple connectivities called?",
+            options: [
+                "A) Web services",
+                "B) Phishing",
+                "C) Directory service",
+                "D) Worms"
+            ],
+            answer: "C"
+        },
+        {
+            question: "Which of the below malware types permits the hackers to access administrative controls and do nearly everything they want with the infected systems?",
+            options: [
+                "A) RATs",
+                "B) Worms",
+                "C) Rootkits",
+                "D) Botnets"
+            ],
+            answer: "C"
         }
     ];
 
