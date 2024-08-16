@@ -11,6 +11,16 @@ body {
     height: 100vh; /* Ensure the body takes up the full height of the viewport */
 }
 
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #5b568f; /* White background color for the container */
+  border-radius: 10px;
+  box-shadow: 0 px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
+}
 
 /* Heading styles */
 h1 {
