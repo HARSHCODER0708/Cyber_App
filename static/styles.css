@@ -8,8 +8,8 @@ body {
     font-style:italic;
     color: #0c0536;
     margin: 9;
-    font-size: 23px;
-    padding: 33;
+    font-size: 23%;
+    padding: 0;
     height: 100vh; /* Ensure the body takes up the full height of the viewport */
 }
 
