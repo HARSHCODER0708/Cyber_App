@@ -19,7 +19,7 @@ body {
   margin: 0 auto;
   text-align: center;
   padding: 1%;
-  font-size: 16px;
+  font-size: 11px;
   background-color: #00bbff; /* White background color for the container */
   border-radius: 40px;
 }
@@ -53,10 +53,9 @@ button {
   border: none;
   padding: 10px 6px;
   margin: 3%;
-  font-size: 17px;
   cursor: pointer;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 13px;
   transition: background-color 0.3s ease;
 }
 
@@ -111,7 +110,7 @@ button#passwordstrengthBtn:hover {
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 9%;
+  font-size: 9px;
 }
 
 #footer p {
