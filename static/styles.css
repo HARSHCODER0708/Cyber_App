@@ -19,7 +19,7 @@ body {
   margin: 0 auto;
   text-align: center;
   padding: 9px;
-  background-color: #5b568f; /* White background color for the container */
+  background-color: #00bbff; /* White background color for the container */
   border-radius: 10px;
   box-shadow: 0 px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
 }
@@ -47,12 +47,12 @@ footer {
 }
 
 button {
-  background-color: #007bff; /* Blue background color for buttons */
+  background-color: #0c2642; /* Blue background color for buttons */
   color: #fff; /* White text color */
   border: none;
-  padding: 15px 30px;
-  margin: 10px;
-  font-size: 16px;
+  padding: 10px 6px;
+  margin: 3%;
+  font-size: 17px;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -105,11 +105,11 @@ button#passwordstrengthBtn:hover {
   background-color: #007bff;
   color: white;
   text-align: center;
-  padding: 1px;
+  padding: 2px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 11px;
+  font-size: 7%;
 }
 
 #footer p {
