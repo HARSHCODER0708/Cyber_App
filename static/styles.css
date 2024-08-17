@@ -1,5 +1,5 @@
 body {
-  background-image: url('https://img.freepik.com/free-vector/data-security-technology-background-vector-blue-tone_53876-112201.jpg?t=st=1723821198~exp=1723824798~hmac=908312498882229695c0291dfeec167837b10a422478443340718730adcbc6fc&w=1060'); /* Replace with your image URL */
+  background-image: url('https://wallpapers.com/images/high/world-map-cyber-security-ivcowv89j1g1ff4m.webp'); /* Replace with your image URL */
     background-size: cover; /* Ensure the image covers the entire screen */
     background-position: center; /* Center the image */
     background-attachment: fixed; /* Keep the image fixed during scrolling */
@@ -21,7 +21,7 @@ body {
   text-align: center;
   padding: 1%;
   font-size: 11px;
-  background-color: #00bbff; /* White background color for the container */
+  background-color: #98a6a9; /* White background color for the container */
   border-radius: 10px;
 }
 
@@ -89,7 +89,7 @@ button#infoGuideBtn:hover {
 }
 
 .content {
-   background: rgba(245, 250, 110, 0.5); /* Semi-transparent background for better readability */
+   background: rgba(39, 150, 184, 0.5); /* Semi-transparent background for better readability */
     padding: 0px;
     border-radius: 20px;
     margin-top: 14px;
