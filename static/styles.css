@@ -7,21 +7,22 @@ body {
     font-family: Arial, sans-serif;
     font-style:italic;
     color: #0c0536;
-    margin: 1;
-    padding: 0;
+    margin: 9;
+    font-size: 23px;
+    padding: 33;
     height: 100vh; /* Ensure the body takes up the full height of the viewport */
 }
 
 
 .container {
-  width: 60%;
-  max-width: 800px;
+  width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
   padding: 1%;
   font-size: 11px;
   background-color: #00bbff; /* White background color for the container */
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 /* Heading styles */
@@ -89,9 +90,9 @@ button#infoGuideBtn:hover {
 
 .content {
    background: rgba(245, 250, 110, 0.5); /* Semi-transparent background for better readability */
-    padding: 6px;
-    border-radius: 60px;
-    margin-top: 4px;
+    padding: 0px;
+    border-radius: 20px;
+    margin-top: 14px;
 
 }
 button#passwordsstrenghtBtn {
